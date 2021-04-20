@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GameRigDB" Class="UserTableLinkDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\GameRigDB.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="GameRigDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.InvoiceTable" Member="InvoiceTables">
+    <Type Name="InvoiceTable">
+      <Column Name="InvoiceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="ProductTable_InvoiceTable" Member="ProductTable" ThisKey="ProductId" OtherKey="ProductId" Type="ProductTable" IsForeignKey="true" />
+      <Association Name="UserTable_InvoiceTable" Member="UserTable" ThisKey="UserID" OtherKey="UserId" Type="UserTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NewsLetterTable" Member="NewsLetterTables">
+    <Type Name="NewsLetterTable">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmailAdrress" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductTable" Member="ProductTables">
+    <Type Name="ProductTable">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Colour" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="[Desc]" Member="Desc" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ImgUrl" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductTable_InvoiceTable" Member="InvoiceTables" ThisKey="ProductId" OtherKey="ProductId" Type="InvoiceTable" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserTable" Member="UserTables">
+    <Type Name="UserTable">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="EmailAd" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CellNumber" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="active" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Usertype" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="UserTable_InvoiceTable" Member="InvoiceTables" ThisKey="UserId" OtherKey="UserID" Type="InvoiceTable" />
+    </Type>
+  </Table>
+</Database>

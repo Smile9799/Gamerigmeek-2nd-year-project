@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UserTableLink">
+  <DataContextMoniker Name="/UserTableLinkDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e8a06f28-74ed-4700-8e38-a93f1ad9059a" absoluteBounds="3.5, 1.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/UserTableLinkDataContext/InvoiceTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="42ea2eab-3748-4a30-8f1a-5d1bd2c23758" absoluteBounds="3.515, 1.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c3ade1a-3683-45d5-824a-a5a5dd0da8e8" absoluteBounds="3.75, 3.75, 2, 1.193992513020834">
+      <DataClassMoniker Name="/UserTableLinkDataContext/NewsLetterTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ce6d2c2-e518-4f9d-9e5c-c328e856790f" absoluteBounds="3.765, 4.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef9b3aef-6c85-4297-b065-a1137680887d" absoluteBounds="0.75, 1, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/UserTableLinkDataContext/ProductTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c40ebbc2-8228-4c1b-b709-7595da8b3a09" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7bea19eb-ed51-46d1-b577-c3c1dc1c2373" absoluteBounds="0.75, 5, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/UserTableLinkDataContext/UserTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="149d7159-3f3c-4d34-98eb-796bd3dcc28c" absoluteBounds="0.765, 5.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.16429768880208); (3.5 : 2.16429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/UserTableLinkDataContext/ProductTable/ProductTable_InvoiceTable" />
+      <nodes>
+        <classShapeMoniker Id="ef9b3aef-6c85-4297-b065-a1137680887d" />
+        <classShapeMoniker Id="e8a06f28-74ed-4700-8e38-a93f1ad9059a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.17390055338542); (3.59375 : 6.17390055338542); (3.59375 : 2.95359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/UserTableLinkDataContext/UserTable/UserTable_InvoiceTable" />
+      <nodes>
+        <classShapeMoniker Id="7bea19eb-ed51-46d1-b577-c3c1dc1c2373" />
+        <classShapeMoniker Id="e8a06f28-74ed-4700-8e38-a93f1ad9059a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

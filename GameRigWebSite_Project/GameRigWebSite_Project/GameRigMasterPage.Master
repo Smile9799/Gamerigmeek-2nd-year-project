@@ -1,0 +1,188 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GameRigMasterPage.master.cs" Inherits="GameRigWebSite_Project.GameRigMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-phone"></i>0607870139</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> GameRig@gmail.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="https://www.facebook.com/GameRig-116627439746798/?modal=admin_todo_tour"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://twitter.com/game_rig"><i class="fa fa-twitter"></i></a></li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 clearfix">
+						<div class="logo pull-left">
+							<a href="Home.aspx"><img src="images/GameRigHome/c619d286-b4ef-4dfb-ba9f-96cd7f82bd5e_200x200.png" width="100" height="100" /></a>
+						</div>
+					</div>
+					<div class="col-md-8 clearfix">
+						<div class="shop-menu clearfix pull-right">
+							<ul class="nav navbar-nav">
+								
+								<li><a href="cart.aspx" id="cartbutton" runat="server"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="login.aspx" id="loginButton1" runat="server"><i class="fa fa-lock"></i> Login</a></li>
+                                <li><a href="Logout.aspx" id="logoutbutton" runat="server"><i class="fa fa-lock"></i> Logout</a></li>
+                                <li><a href="Register.aspx" id="regbutton" runat="server"><i class="fa fa-lock"></i> Register</a></li>
+                                <li><a href="Register.aspx" id="adduserbutton" runat="server"><i class="fa fa-lock"></i> Add User</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="Home.aspx" class="active">Home</a></li>
+								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="Catalogue.aspx">Catalogue</a></li> 
+										<li><a href="Cart.aspx" id="cartbutton2" runat="server">Cart</a></li> 
+										<li><a href="login.aspx" id="loginButton" runat="server">Login</a></li> 
+                                        <li><a href="Register.aspx" id="register1" runat="server">Register</a></li>
+                                        <li><a href="logout.aspx" id="logoutbutton2" runat="server">Logout</a></li> 
+                                        <li><a href="AddProduct.aspx" id="add" runat="server">AddProduct</a></li> 
+                                        <li><a href="ProductId.aspx" id="edit" runat="server">EditProduct</a></li>
+                                         <li><a href="DeleteProduct.aspx" id="deleteP" runat="server">DeleteProduct</a></li>
+                                        <li><a href="Register.aspx" id="register2" runat="server">Add User</a></li>
+                                        <li><a href="DeleteUser.aspx" id="deleteU" runat="server">Delete User</a></li>
+                                    </ul>
+                                </li> 
+								<li><a href="about.aspx">About Us</a></li>
+								
+                                <li><a href="SearchProduct.aspx">Search</a></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    	<footer id="footer"><!--Footer-->
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Quick Shop</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="Laptops.aspx">Laptops</a></li>
+								<li><a href="Desktops.aspx">Desktops</a></li>
+								<li><a href="Monitors.aspx">Monitors</a></li>
+								
+								<li><a href="Components.aspx">Components</a></li>
+                                <li><a href="Accesories.aspx">Accesories</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Our Policies</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="TCs.aspx">Terms of Use</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>About GameRig</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="about.aspx">Company Information</a></li>
+								
+								
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+	
+
+  
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+
+</body>
+</html>
